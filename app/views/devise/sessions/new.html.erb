@@ -1,20 +1,41 @@
-<h2>Log in</h2>
+<div class="row mt-5">
+  <div class="col-md-4 offset-md-4">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <h2 class="text-center">Log in</h2>
+    <br>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <div class="form-group">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      label: false,
+                      placeholder: "Email",
+                      input_html: { class: 'form-control', autocomplete: "email" } %>
+        </div>
+        <div class="form-group">
+          <%= f.input :password,
+                      required: false,
+                      label: false,
+                      placeholder: "Password",
+                      input_html: { class: 'form-control', autocomplete: "current-password" } %>
+        </div>
+
+        <div>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          <span class="pull-right">
+            <%= link_to "Forgot Password", new_user_password_path %>
+          </span>
+        </div>
+
+
+      </div>
+
+      <div class="actions">
+        <%= f.button :submit, "Log in", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
