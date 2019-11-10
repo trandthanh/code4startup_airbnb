@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'jquery-rails'
 gem 'devise'
 
 
