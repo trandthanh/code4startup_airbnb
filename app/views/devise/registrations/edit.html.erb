@@ -6,7 +6,8 @@
     <br>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= f.error_notification %>
+      <%#= f.error_notification %>
+      <%= render 'shared/toastr_errors' %>
 
       <div class="form-inputs">
         <%= f.input :fullname, label: false, required: true, placeholder: "Fullname" %>
