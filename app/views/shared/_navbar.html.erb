@@ -16,9 +16,9 @@
       <% else %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <% if avatar_url(current_user).present? %>
-              <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
-            <% end %>
+            <%# if avatar_url(current_user).present? %>
+              <%#= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
+            <%# end %>
             <%= current_user.fullname %>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
