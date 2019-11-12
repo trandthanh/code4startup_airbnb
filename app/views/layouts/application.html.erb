@@ -8,15 +8,15 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-    <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   </head>
   <body>
-    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
 
     <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%#= render 'shared/toastr_flashes' %>
+    <%#= render 'shared/flashes' %>
+    <%= render 'shared/toastr_flashes' %>
 
 
     <div class="container">
